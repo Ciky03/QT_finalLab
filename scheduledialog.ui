@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ScheduleDialog</class>
+ <widget class="QDialog" name="ScheduleDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="titleLabel">
+       <property name="text">
+        <string>标题：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="titleLineEdit"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="descriptionLabel">
+       <property name="text">
+        <string>描述：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QTextEdit" name="descriptionTextEdit"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="startTimeLabel">
+       <property name="text">
+        <string>开始时间：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QDateTimeEdit" name="startDateTimeEdit"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="endTimeLabel">
+       <property name="text">
+        <string>结束时间：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QDateTimeEdit" name="endDateTimeEdit"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="reminderTimeLabel">
+       <property name="text">
+        <string>提醒时间：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QDateTimeEdit" name="reminderDateTimeEdit"/>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="repeatTypeLabel">
+       <property name="text">
+        <string>重复：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QComboBox" name="repeatTypeComboBox"/>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="priorityLabel">
+       <property name="text">
+        <string>优先级：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QComboBox" name="priorityComboBox"/>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="colorLabel">
+       <property name="text">
+        <string>颜色：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QPushButton" name="colorButton">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>24</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ScheduleDialog</receiver>
+   <slot>accept()</slot>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ScheduleDialog</receiver>
+   <slot>reject()</slot>
+  </connection>
+ </connections>
+</ui> 

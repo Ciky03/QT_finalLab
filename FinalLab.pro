@@ -10,13 +10,18 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    scheduleitem.cpp \
+    scheduledialog.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    scheduleitem.h \
+    scheduledialog.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    scheduledialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
